@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function Form() {
+export default function Form(props) {
   return (
-    <form>
+    <form onSubmit={props.getRecipe}>
         <input type="text"/>
         <button>Search</button>
     </form>
