@@ -8,8 +8,8 @@ function Router() {
   return (
     <BrowserRouter>
         <Switch>
-            <Route path="/" component={App}></Route>
-            <Route path="/recipe" component={Recipe}></Route>
+            <Route path="/" component={App} exact></Route>
+            <Route path="/recipe/:id" component={Recipe}></Route>
         </Switch>
     </BrowserRouter>
   )
