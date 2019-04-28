@@ -5,6 +5,10 @@ import Form from './components/Form'
 const API_KEY = '731dd367ca87f8649a564f647a99554d';
 
 class App extends Component {
+  state = {
+    recipes: []
+  }
+
   getRecipe = async (e) => {
     const recipeName = e.target.elements.recipeName.value;
     e.preventDefault();
@@ -15,7 +19,9 @@ class App extends Component {
     //Get API data in JSON format
     const data = await api_call.json();
 
-    console.log(data)
+    this.setState({recipes: data.recipes});
+
+    console.log(this.state.recipes)
   }
   render() {
     return (
