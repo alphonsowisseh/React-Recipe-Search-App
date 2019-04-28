@@ -53,7 +53,7 @@ button:focus {
 }
 
 .recipe__text {
-  margin-left: 15px;
+  margin: 0px 15px;
 }
 
 .recipes__title {
