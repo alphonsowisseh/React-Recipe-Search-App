@@ -19,7 +19,7 @@ export default function Recipes(props) {
                            </p>
                         </div>
                         <button className="recipe_buttons">
-                            <Link to={{ pathname: `/recipe/${recipe.recipe_id}`, state: {recipe}}} >View Recipe</Link>
+                            <Link to={{ pathname: `/recipe/${recipe.recipe_id}`, state: recipe.title}} >View Recipe</Link>
                         </button>
                     </div>
                 </div>

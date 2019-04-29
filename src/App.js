@@ -4,7 +4,7 @@ import Form from './components/Form'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Recipes from './components/Recipes';
 
-const API_KEY = '731dd367ca87f8649a564f647a99554d';
+const API_KEY = 'e16f07499a4fdbd383213acea8ff37a8';
 
 class App extends Component {
   state = {
@@ -22,8 +22,6 @@ class App extends Component {
     const data = await api_call.json();
 
     this.setState({recipes: data.recipes});
-
-    console.log(this.state.recipes)
   }
   render() {
     return (
