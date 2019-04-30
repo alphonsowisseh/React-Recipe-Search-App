@@ -23,15 +23,15 @@ class App extends Component {
 
     this.setState({recipes: data.recipes});
   }
-  componentDidUpdate = () => {
-    const recipes = JSON.stringify(this.state.recipes);
-    sessionStorage.setItem("recipes", recipes);
-  }
-  componentDidMount = () => {
-    const json = sessionStorage.getItem("recipes");
-    const recipes = JSON.parse(json);
-    this.setState({ recipes });
-  }
+  // componentDidMount = () => {
+  //   const json = sessionStorage.getItem("recipes");
+  //   const recipes = JSON.parse(json);
+  //   this.setState({ recipes });
+  // }
+  // componentDidUpdate = () => {
+  //   const recipes = JSON.stringify(this.state.recipes);
+  //   sessionStorage.setItem("recipes", recipes);
+  // }
   render() {
     return (
       <div className="App">
