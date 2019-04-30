@@ -26,7 +26,7 @@ export class Recipe extends Component {
       <header className="App-header">
           <h1 className="App-title">Foodie</h1>
         </header>
-        <div style={{backgroundImage: `url(${recipe.image_url})`, height: '300px', backgroundSize: '100%', marginTop: '-2rem', opacity: '.6'}}></div>
+        <div style={{backgroundImage: `url(${recipe.image_url})`, height: '300px', backgroundSize: '100%', marginTop: '-2rem', opacity: '.6', backgroundPositionY: 'center'}}></div>
         <div className="container">
         { this.state.activeRecipe.length !== 0 &&
           <div className="active-recipe">
