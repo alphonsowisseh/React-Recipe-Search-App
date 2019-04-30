@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import { Link } from "react-router-dom";
 
-const API_KEY = '731dd367ca87f8649a564f647a99554d';
+const API_KEY = 'e16f07499a4fdbd383213acea8ff37a8';
 
 export class Recipe extends Component {
     state = {
@@ -19,7 +19,7 @@ export class Recipe extends Component {
 
     }
   render() {
-    console.log(this.props.location.state)
+    console.log(this.state.activeRecipe)
     const recipe = this.state.activeRecipe;
     return (
       <div>
@@ -36,7 +36,7 @@ export class Recipe extends Component {
               Publisher: <span>{ recipe.publisher }</span>
             </h4>
             <p className="active-recipe__website">Website: 
-              <span><a href={recipe.publisher_url}>{recipe.publisher_url}</a></span>
+              <span><a href={recipe.source_url}>{recipe.publisher_url}</a></span>
             </p>
             <button className="active-recipe__button" style={{margin: "60px auto"}}>
               <Link to="/">Go Home</Link>
