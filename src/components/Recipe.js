@@ -22,7 +22,12 @@ export class Recipe extends Component {
     console.log(this.props.location.state)
     const recipe = this.state.activeRecipe;
     return (
-      <div className="container">
+      <div>
+      <header className="App-header">
+          <h1 className="App-title">Foodie</h1>
+        </header>
+        <div style={{backgroundImage: `url(${recipe.image_url})`, height: '300px', backgroundSize: '100%', marginTop: '-2rem', opacity: '.6'}}></div>
+        <div className="container">
         { this.state.activeRecipe.length !== 0 &&
           <div className="active-recipe">
             <img className="active-recipe__img" src={recipe.image_url} alt={recipe.title}/>
@@ -33,11 +38,12 @@ export class Recipe extends Component {
             <p className="active-recipe__website">Website: 
               <span><a href={recipe.publisher_url}>{recipe.publisher_url}</a></span>
             </p>
-            <button className="active-recipe__button">
+            <button className="active-recipe__button" style={{margin: "60px auto"}}>
               <Link to="/">Go Home</Link>
             </button>
           </div>
         }
+      </div>
       </div>
     )
   }
